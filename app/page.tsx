@@ -1,9 +1,13 @@
-import ProjectTable from "./component/ProjectTable"
+import { MantineProvider } from "@mantine/core";
+import ProjectTable from "./component/ProjectTable";
+import { TableSort } from "./component/TableSort";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <ProjectTable/>
+    <main className="">
+      <MantineProvider>
+        <TableSort />
+      </MantineProvider>
     </main>
-  )
+  );
 }
